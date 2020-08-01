@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace ARS.API.Models.Commands
 {
-    public class TravelCommand
+    public class TravelCommand : BaseCommand
     {
         public int TravelId { get; set; }
 
         public int? ParentId { get; set; }
 
         public int DriverId { get; set; }
+
+        public int PassengerId { get; set; }
 
         public string Description { get; set; }
 

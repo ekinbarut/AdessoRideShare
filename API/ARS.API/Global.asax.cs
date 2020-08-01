@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ARS.Service;
+using ARS.Service.Interfaces;
+using LightInject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +21,19 @@ namespace ARS.API
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            #region [ Dependency Injection ]
+
+            var container = new ServiceContainer();
+            container.RegisterApiControllers();
+
+            //register other services
+            container.EnableWebApi(GlobalConfiguration.Configuration);
+
+            // Register your types, for instanceScoped);
+            container.Register<IARSService, ARSService>();
+
+            #endregion
         }
     }
 }

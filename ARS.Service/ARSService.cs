@@ -22,12 +22,11 @@ namespace ARS.Service
         private UsersServiceBase userServiceBase = new UsersServiceBase();
         private TravelUsersServiceBase travelUserServiceBase = new TravelUsersServiceBase();
 
-
         #region [ Queries ]
 
-        public ARSServiceResponse<Travels> GetTravels(TravelQueryRequest req)
+        public Common.Models.Responses.ARSServiceResponse<Travels> GetTravels(TravelQueryRequest req)
         {
-            var response = new ARSServiceResponse<Travels>()
+            var response = new Common.Models.Responses.ARSServiceResponse<Travels>()
             {
                 Result = new List<Travels>()
             };
@@ -111,14 +110,14 @@ namespace ARS.Service
 
         #region [ Commands ]
 
-        public ARSServiceResponse<Travels> CreateTravel(TravelCreated ev)
+        public Common.Models.Responses.ARSServiceResponse<Travels> CreateTravel(TravelCreated ev)
         {
             // Create the watch
             var sw = new Stopwatch();
             sw.Start();
 
             // Create a response object
-            var response = new ARSServiceResponse<Travels>();
+            var response = new Common.Models.Responses.ARSServiceResponse<Travels>();
 
             #region [ Create travel ]
 
@@ -174,14 +173,14 @@ namespace ARS.Service
             return response;
         }
 
-        public ARSServiceResponse<Travels> UpdateTravelStatus(TravelUpdated ev)
+        public Common.Models.Responses.ARSServiceResponse<Travels> UpdateTravelStatus(TravelUpdated ev)
         {
             // Create the watch
             var sw = new Stopwatch();
             sw.Start();
 
             // Create a response object
-            var response = new ARSServiceResponse<Travels>();
+            var response = new Common.Models.Responses.ARSServiceResponse<Travels>();
 
             #region [ Load travel ]
 
@@ -223,14 +222,14 @@ namespace ARS.Service
             return response;
         }
 
-        public ARSServiceResponse<Travels> JoinTravel(TravelUpdated ev)
+        public Common.Models.Responses.ARSServiceResponse<Travels> JoinTravel(TravelUpdated ev)
         {
             // Create the watch
             var sw = new Stopwatch();
             sw.Start();
 
             // Create a response object
-            var response = new ARSServiceResponse<Travels>();
+            var response = new Common.Models.Responses.ARSServiceResponse<Travels>();
 
             #region [ Load travel ]
 
@@ -267,7 +266,7 @@ namespace ARS.Service
 
             #region [ Load User ]
 
-            var user = userServiceBase.Get(s => s.UserId == ev.UserId).Result.FirstOrDefault();
+            var user = userServiceBase.Get(s => s.UserId == ev.PassengerId).Result.FirstOrDefault();
 
             if (user == null)
             {

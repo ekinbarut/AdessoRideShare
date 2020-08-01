@@ -1,18 +1,13 @@
-﻿using ARS.Common.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ARS.Models.Events
+namespace ARS.API.Models.Commands
 {
-    public class BaseEvent
+    public class BaseCommand
     {
-
-        public DateTime TimeStamp { get; set; }
-
         public EntityStatus Status { get; set; }
-
     }
 }

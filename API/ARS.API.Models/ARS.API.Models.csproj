@@ -42,11 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIEntity.cs" />
+    <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\TravelCommand.cs" />
     <Compile Include="Countries.cs" />
-    <Compile Include="Countries.cs" />
     <Compile Include="Enumerations.cs" />
-    <Compile Include="Requests\TravelRequest.cs" />
+    <Compile Include="Queries\BaseQuery.cs" />
+    <Compile Include="Queries\TravelQuery.cs" />
     <Compile Include="Travels.cs" />
     <Compile Include="TravelUsers.cs" />
     <Compile Include="Users.cs" />
@@ -56,7 +57,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AdessoRideShare\ARS.Common.Models\ARS.Common.Models.csproj">
+    <ProjectReference Include="..\..\ARS.Common.Models\ARS.Common.Models.csproj">
       <Project>{B426CDFD-4A75-4442-90F4-114383D583EE}</Project>
       <Name>ARS.Common.Models</Name>
     </ProjectReference>

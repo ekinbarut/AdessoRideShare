@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ARS.API.Models.Requests
+namespace ARS.API.Models.Queries
 {
-    public class TravelQuery
+    public class TravelQuery : BaseQuery
     {
         public List<int> TravelIds = new List<int>();
 

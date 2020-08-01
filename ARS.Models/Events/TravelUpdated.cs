@@ -14,6 +14,8 @@ namespace ARS.Models.Events
 
         public int DriverId { get; set; }
 
+        public int PassengerId { get; set; }
+
         public string Description { get; set; }
 
         public int SeatCount { get; set; }
