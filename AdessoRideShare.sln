@@ -9,11 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.Service", "ARS.Service\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{F518F939-D31D-45BF-A9AD-FE48D04EEC18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.API", "..\AdessoRideShare/API\ARS.API\ARS.API.csproj", "{19BA26C6-4949-4142-8151-EEC78614EAB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.API", "API\ARS.API\ARS.API.csproj", "{19BA26C6-4949-4142-8151-EEC78614EAB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.API.Models", "..\AdessoRideShare/API\ARS.API.Models\ARS.API.Models.csproj", "{4421B0B6-5C9E-4EA4-B7E8-D43B1C0764FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.API.Models", "API\ARS.API.Models\ARS.API.Models.csproj", "{4421B0B6-5C9E-4EA4-B7E8-D43B1C0764FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.Common.Models", "ARS.Common.Models\ARS.Common.Models.csproj", "{B426CDFD-4A75-4442-90F4-114383D583EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARS.Test", "ARS.Test\ARS.Test.csproj", "{472260EA-168E-42F1-8A7C-9A396AF4EE0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{B426CDFD-4A75-4442-90F4-114383D583EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B426CDFD-4A75-4442-90F4-114383D583EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B426CDFD-4A75-4442-90F4-114383D583EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472260EA-168E-42F1-8A7C-9A396AF4EE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472260EA-168E-42F1-8A7C-9A396AF4EE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472260EA-168E-42F1-8A7C-9A396AF4EE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472260EA-168E-42F1-8A7C-9A396AF4EE0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

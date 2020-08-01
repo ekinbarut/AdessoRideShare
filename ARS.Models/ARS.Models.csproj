@@ -53,17 +53,9 @@
   <ItemGroup>
     <Compile Include="Events\TravelCreated.cs" />
     <Compile Include="Events\TravelUpdated.cs" />
-    <Compile Include="Migrations\202008011238485_DB-Init.cs" />
-    <Compile Include="Migrations\202008011238485_DB-Init.designer.cs">
-      <DependentUpon>202008011238485_DB-Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008011414353_DB-Improvement.cs" />
-    <Compile Include="Migrations\202008011414353_DB-Improvement.designer.cs">
-      <DependentUpon>202008011414353_DB-Improvement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008011415330_DB-Fix.cs" />
-    <Compile Include="Migrations\202008011415330_DB-Fix.designer.cs">
-      <DependentUpon>202008011415330_DB-Fix.cs</DependentUpon>
+    <Compile Include="Migrations\202008011725415_DB-Init.cs" />
+    <Compile Include="Migrations\202008011725415_DB-Init.designer.cs">
+      <DependentUpon>202008011725415_DB-Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ARSDBContext.cs" />
@@ -82,23 +74,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202008011725415_DB-Init.resx">
+      <DependentUpon>202008011725415_DB-Init.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ARS.Common.Models\ARS.Common.Models.csproj">
       <Project>{B426CDFD-4A75-4442-90F4-114383D583EE}</Project>
       <Name>ARS.Common.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008011238485_DB-Init.resx">
-      <DependentUpon>202008011238485_DB-Init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008011414353_DB-Improvement.resx">
-      <DependentUpon>202008011414353_DB-Improvement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008011415330_DB-Fix.resx">
-      <DependentUpon>202008011415330_DB-Fix.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

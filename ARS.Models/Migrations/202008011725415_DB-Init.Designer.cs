@@ -13,7 +13,7 @@ namespace ARS.Models.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008011238485_DB-Init"; }
+            get { return "202008011725415_DB-Init"; }
         }
         
         string IMigrationMetadata.Source

@@ -27,6 +27,7 @@
                 c => new
                     {
                         TravelId = c.Int(nullable: false, identity: true),
+                        ParentId = c.Int(),
                         DriverId = c.Int(nullable: false),
                         Description = c.String(),
                         SeatCount = c.Int(nullable: false),
@@ -43,10 +44,12 @@
                     })
                 .PrimaryKey(t => t.TravelId)
                 .ForeignKey("dbo.Countries", t => t.ArrivingCountryId)
+                .ForeignKey("dbo.Travels", t => t.ParentId)
                 .ForeignKey("dbo.Countries", t => t.DepartingCountryId)
                 .ForeignKey("dbo.Users", t => t.DriverId, cascadeDelete: true)
                 .ForeignKey("dbo.Countries", t => t.Countries_CountryId)
                 .ForeignKey("dbo.Countries", t => t.Countries_CountryId1)
+                .Index(t => t.ParentId)
                 .Index(t => t.DriverId)
                 .Index(t => t.DepartingCountryId)
                 .Index(t => t.ArrivingCountryId)
@@ -94,6 +97,7 @@
             DropForeignKey("dbo.Travels", "Countries_CountryId", "dbo.Countries");
             DropForeignKey("dbo.Travels", "DriverId", "dbo.Users");
             DropForeignKey("dbo.Travels", "DepartingCountryId", "dbo.Countries");
+            DropForeignKey("dbo.Travels", "ParentId", "dbo.Travels");
             DropForeignKey("dbo.Travels", "ArrivingCountryId", "dbo.Countries");
             DropIndex("dbo.TravelUsers", new[] { "TravelId" });
             DropIndex("dbo.TravelUsers", new[] { "UserId" });
@@ -102,6 +106,7 @@
             DropIndex("dbo.Travels", new[] { "ArrivingCountryId" });
             DropIndex("dbo.Travels", new[] { "DepartingCountryId" });
             DropIndex("dbo.Travels", new[] { "DriverId" });
+            DropIndex("dbo.Travels", new[] { "ParentId" });
             DropTable("dbo.TravelUsers");
             DropTable("dbo.Users");
             DropTable("dbo.Travels");
